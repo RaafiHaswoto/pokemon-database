@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import spinner from '../layout/spinner.gif';
+import spinner from '../Layout/spinner.gif';
 
 const Sprite = styled.img`
   width: 5em;
@@ -49,7 +49,6 @@ export default class PokemonCard extends Component {
     const { name, url } = this.props;
 
     const pokemonIndex = url.split('/')[url.split('/').length - 2];
-    //const imageUrl = `./sprites/pokemon/${pokemonIndex}.png`;
     const imageUrl = `https://github.com/PokeAPI/sprites/blob/master/sprites/pokemon/${pokemonIndex}.png?raw=true`;
 
     this.setState({ name, imageUrl, pokemonIndex });
