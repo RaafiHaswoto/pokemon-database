@@ -1,13 +1,31 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import { HashRouter as Router, Route, Switch } from 'react-router-dom';
+
+//styling
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+//Components
+import NavBar from './components/layout/NavBar';
+import Dashboard from './components/layout/Dashboard';
+import SearchBar from './components/search/SearchBar';
+import Pokemon from './components/pokemon/Pokemon';
 
 class App extends Component {
   render() {
     return (
-      <div>
-        
-      </div>
+      <Router>
+        <div className="App" style={{ background: "#f44242" }}>
+          <NavBar />
+          <div className="container">
+          <SearchBar />
+            <Switch>
+              <Route exact path="/" component={Dashboard} />
+              <Route exact path="/pokemon/:pokemonIndex" component={Pokemon} />
+            </Switch>
+          </div>
+        </div>
+      </Router>
     );
   }
 }
