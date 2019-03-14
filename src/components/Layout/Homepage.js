@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import PokemonList from '../pokemon/PokemonList';
+import PokemonList from '../PokemonDB/PokemonList';
 import SearchBar from '../search/SearchBar';
 
 export default class Homepage extends Component {
