@@ -6,21 +6,19 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 //Components
-import NavBar from './components/layout/NavBar';
-import Dashboard from './components/layout/Dashboard';
+import Homepage from './components/Layout/Homepage';
 import SearchBar from './components/search/SearchBar';
-import Pokemon from './components/pokemon/Pokemon';
+import Pokemon from './components/PokemonDB/Pokemon';
 
 class App extends Component {
   render() {
     return (
       <Router>
         <div className="App" style={{ background: "#f44242" }}>
-          <NavBar />
           <div className="container">
           <SearchBar />
             <Switch>
-              <Route exact path="/" component={Dashboard} />
+              <Route exact path="/" component={Homepage} />
               <Route exact path="/pokemon/:pokemonIndex" component={Pokemon} />
             </Switch>
           </div>
