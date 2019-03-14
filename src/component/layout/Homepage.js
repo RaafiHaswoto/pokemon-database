@@ -8,6 +8,7 @@ export default class Homepage extends Component {
     return (
       <div className="row">
         <div className="col">
+        <SearchBar />
           <PokemonList />
         </div>
       </div>
